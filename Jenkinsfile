@@ -4,7 +4,7 @@ pipeline {
     stage ('Clone application repository') {
       steps {
         sh 'printenv'
-        git "${env.TARGET_APPLICATION_REPO_URL}"
+        git branch: 'main', url: "${env.TARGET_APPLICATION_REPO_URL}"
       }
     }
     stage ('Print README.md from application repository') {
