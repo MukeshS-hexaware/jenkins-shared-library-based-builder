@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage ('Clone application repository') {
       steps {
+        sh 'printenv'
         git "${env.TARGET_APPLICATION_REPO_URL}"
       }
     }
